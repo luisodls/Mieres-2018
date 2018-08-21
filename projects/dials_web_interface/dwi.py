@@ -5,7 +5,7 @@ from time import sleep
 
 @app.route('/', methods=['POST', 'GET'])
 def hello_world():
-    str_entered = ""
+    str_out = ""
     if request.method == 'POST':
         print request.form
 
@@ -13,7 +13,7 @@ def hello_world():
 
         str_entered = request.form['command']
 
-        str_out = (str_entered + "\n\n") * 50
+        str_out = (str_entered + "\n\n") * 15
 
         print "\n", str_entered, "\n"
 
